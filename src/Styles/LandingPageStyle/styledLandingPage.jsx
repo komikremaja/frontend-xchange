@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const BodyLandingPage = styled.div`
     background-color: rgb(235 235 235);
-    height: 1500px;
 `
 export const BorderContent = styled.div`
-    height: 40%;
+    height: 550px;
     background-image: url(${props => props.backgroundImage});
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,22 +62,19 @@ export const PointLandingPage = styled.div`
 `
 
 export const BorderSubContent = styled.div`
-    height: 90%;
-    border: 1px red solid;
-    width: 100%;
     display:flex;
     justify-content: space-evenly;
 `
 
 export const BorderInSubContent = styled.div`
-height: 40%;
-background: white;
-border: 1px solid white;
-width: 100%;
-margin: 40px;
-padding: 40px;
-box-shadow: rgba(0.5, 0.5, 0.5, 0.05) 4px 4px 4px;
-border-radius: 20px;
+    height: 500px;
+    background: white;
+    border: 1px solid white;
+    width: 450px;
+    margin: 40px 20px;
+    padding: 40px;
+    box-shadow: rgba(1, 1, 1, 0.05) 4px 4px 4px;
+    border-radius: 20px;
 `
 
 export const TextTitleSubContent = styled.div`
@@ -88,10 +84,7 @@ export const TextTitleSubContent = styled.div`
     font-size: 40px;
     height: 20%;
     line-height: 50px;
-    width: 100%;
     justify-content: center;
-    /* align-items: center; */
-    /* justify-content: center; */
     display: flex;
     color: rgb(0, 0, 0);
     text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
@@ -103,10 +96,7 @@ export const ImageSubContent = styled.div`
     font-size: 40px;
     height: 30%;
     line-height: 50px;
-    width: 100%;
     justify-content: center;
-    /* align-items: center; */
-    /* justify-content: center; */
     display: flex;
     color: rgb(0, 0, 0);
     text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;

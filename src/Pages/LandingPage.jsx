@@ -6,6 +6,7 @@ import safeImage from '../Assets/Safe.png';
 import "../Styles/LandingPageStyle/styledLandingPagesCss.css";
 import FairImage from '../Assets/Fair.png';
 import { BodyLandingPage, BorderContent, BorderInSubContent, BorderLeftTextContent, BorderRightTextContent, BorderSubContent, ImageSubContent, MessageSubContent, NoteTitleLandingPage, PointLandingPage, SubTitleLandingPage, TextTitleSubContent, TitleLandingPage } from '../Styles/LandingPageStyle/styledLandingPage'
+import BottomBarPage from '../components/BottomBar/BottomBarPage';
 
 
 export default function LandingPage() {
@@ -74,6 +75,7 @@ export default function LandingPage() {
                     </MessageSubContent>
                 </BorderInSubContent>
             </BorderSubContent>
+            <BottomBarPage/>
         </BodyLandingPage>
     )
 }
