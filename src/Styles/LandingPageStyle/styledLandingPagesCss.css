@@ -1,0 +1,18 @@
+.imageBackGround {
+    background: url("../../Assets/bgLandingPage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.noteTitleCustomColor {
+    color: #479DC2;
+}
+
+.orderListPoint {
+    height: 30%;
+    width: 90%;
+}
+
+.sizeLogo{
+    height: 60px;
+}
