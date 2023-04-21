@@ -8,7 +8,7 @@ export default function Login() {
   return (
     <BorderLogin>
       <BorderKiriAuth title='Welcome and change your money'/>
-      <BorderKananAuth/>
+      <BorderKananAuth currPage='Login'/>
     </BorderLogin>
   )
 }

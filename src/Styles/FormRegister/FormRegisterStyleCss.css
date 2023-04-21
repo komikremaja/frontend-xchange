@@ -1,0 +1,18 @@
+.BorderFormRegis{
+    height: 900px !important;
+}
+
+.SuccessImage{
+    height: 120px;
+}
+
+.ButtonNavigateLogin{
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+}
+
+.ShowDisplay{
+    display: block !important;
+}

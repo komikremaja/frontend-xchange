@@ -13,7 +13,6 @@ export const BorderKiri = styled.div`
 `
 
 export const BorderKanan = styled.div`
-    border: 1px blue solid;
     width:40%;
 `
 

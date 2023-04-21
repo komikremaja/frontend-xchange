@@ -9,8 +9,38 @@
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
+    outline: none;
 }
 
 .FormInput::placeholder{
     text-align: center;
 }
+
+.ButtonSubmit{
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.ButtonSubmitHover:hover{
+    background-color: #3d8dd8;
+    cursor: pointer;
+}
+
+.TextForgetPass:hover{
+    color: #3d8dd8;
+    cursor: pointer;
+}
+
+.ButtonDaftarHover:hover{
+    background-color: rgba(13, 179, 30, 0.83);
+    cursor: pointer;
+}
+
+.HideForm{
+    display: none;
+}
+
