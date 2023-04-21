@@ -1,0 +1,16 @@
+.FormInput {
+    border: 1px solid #b8b8bfa3;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    background: rgb(112 176 235 / 19%);
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.FormInput::placeholder{
+    text-align: center;
+}

@@ -12,7 +12,7 @@ export default function BottomBarPage() {
                 </ContentBottomBar>
                 <img src={ojk} alt="OJK" className='imageOjk'/>
                 <ContentBottomBar>
-                Contact: Xchange@gmail.com
+                Phone: 021-3411-1688
                 </ContentBottomBar>
             </BorderInBottomBar>
         </BorderBottomBar>

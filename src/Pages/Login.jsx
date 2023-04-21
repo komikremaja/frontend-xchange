@@ -1,15 +1,14 @@
 import React from 'react'
-import { BorderKanan, BorderKiri, BorderLogin } from '../Styles/LoginStyle/LoginStyleComponent'
+import { BorderButtonBack, BorderInKiri, BorderKanan, BorderKiri, BorderLogin, TextTitleKiri } from '../Styles/LoginStyle/LoginStyleComponent'
+import BorderKiriAuth from '../components/BorderAuth/BorderKiriAuth'
+import BorderKananAuth from '../components/BorderAuth/BorderKananAuth'
+
 
 export default function Login() {
   return (
     <BorderLogin>
-      <BorderKiri>
-        tes
-      </BorderKiri>
-      <BorderKanan>
-        tes
-      </BorderKanan>
+      <BorderKiriAuth title='Welcome and change your money'/>
+      <BorderKananAuth/>
     </BorderLogin>
   )
 }
