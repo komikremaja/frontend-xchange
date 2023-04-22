@@ -1,0 +1,12 @@
+.BorderFormForgetPass{
+    height: 400px !important;
+}
+
+.SpinnerLoading{
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.ShowDisplayLoading{
+    display: flex !important;
+}

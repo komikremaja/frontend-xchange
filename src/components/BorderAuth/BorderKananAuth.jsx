@@ -4,6 +4,7 @@ import FormLogin from '../FormAuth/FormLogin'
 import '../../Styles/FormLogin/FormLoginStyleCss.css'
 import FormRegister from '../FormAuth/FormRegister'
 import FormSuccessRegister from '../FormAuth/FormSuccessRegister'
+import FormForgetPass from '../FormAuth/FormForgetPass'
 
 const BorderKananAuth = (props) => {
     const {currPage} = props;
@@ -24,6 +25,7 @@ const BorderKananAuth = (props) => {
                 <FormLogin isHide={currPage}/>
                 <FormRegister isHide={currPage} onChildChange={handlePinForm} onIdUser={handleIdUser}/>
                 <FormSuccessRegister isHide={currPage}/>
+                <FormForgetPass isHide={currPage}/>
             </BorderInKanan>
         </BorderKanan>
     )

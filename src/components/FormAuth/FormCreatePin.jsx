@@ -22,7 +22,7 @@ export default function FormCreatePin(props) {
         const responseRegistPin = await CreatePinService(data);
         console.log("Response buat pin", responseRegistPin.data);
         if (responseRegistPin.data.status === 201) {
-            navigate(`/user/success-register`);
+            navigate(`/user/success`);
         }
     }
 

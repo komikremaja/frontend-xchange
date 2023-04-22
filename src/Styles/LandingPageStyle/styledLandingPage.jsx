@@ -4,7 +4,7 @@ export const BodyLandingPage = styled.div`
     background-color: rgb(235 235 235);
 `
 export const BorderContent = styled.div`
-    height: 550px;
+    height: 600px;
     background-image: url(${props => props.backgroundImage});
     background-repeat: no-repeat;
     background-size: cover;

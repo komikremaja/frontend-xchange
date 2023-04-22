@@ -11,19 +11,23 @@ const NavbarLandingPage = (props) => {
       <BorderInNavbar>
 
         {/* border logo navbar */}
-        <BorderLogoNavbar>
-          <img src={logoXchange} alt="Logo X Change" className='sizeLogo' />
-          <NameLogo>
-            Change
-          </NameLogo>
-        </BorderLogoNavbar>
+        <Link to={`/`}>
+          <BorderLogoNavbar>
+            <img src={logoXchange} alt="Logo X Change" className='sizeLogo' />
+            <NameLogo>
+              Change
+            </NameLogo>
+          </BorderLogoNavbar>
+        </Link>
         {/* border logo navbar */}
 
         {/* Menu Navbar */}
         <BorderMenuNavbar>
-          <MenuNavbar>
-            {menu1}
-          </MenuNavbar>
+          <Link to={`/`}>
+            <MenuNavbar>
+              {menu1}
+            </MenuNavbar>
+          </Link>
           <MenuNavbar>
             {menu2}
           </MenuNavbar>
@@ -45,9 +49,9 @@ const NavbarLandingPage = (props) => {
             |
           </SeperateAuth>
           <Link to={`/user/register`}>
-          <TextAuth>
-            Register
-          </TextAuth>
+            <TextAuth>
+              Register
+            </TextAuth>
           </Link>
         </BorderLoginAndRegister>
       </BorderInNavbar>

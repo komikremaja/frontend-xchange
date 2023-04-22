@@ -3,16 +3,18 @@ import { BorderButtonBack, BorderInKiri, BorderKiri, TextTitleKiri } from '../..
 import leftImageBg from '../../Assets/BackgroundLogin.png';
 import backImage from '../../Assets/TandaPanahBack.png';
 import { Link } from 'react-router-dom';
+import '../../Styles/index.css'
 
 const BorderKiriAuth = (props) => {
     const { title } = props;
     return (
         <BorderKiri>
             <BorderInKiri Image={leftImageBg}>
-                <Link to={`/`}>
-                    <BorderButtonBack Image={backImage}>
-                    </BorderButtonBack>
-                </Link>
+                <BorderButtonBack Image={backImage}>
+                    <Link to={`/`} className='LinkBack'>
+                        <div></div>
+                    </Link>
+                </BorderButtonBack>
                 <TextTitleKiri>
                     {title}
                 </TextTitleKiri>

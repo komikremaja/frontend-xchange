@@ -8,7 +8,7 @@ export default function BottomBarPage() {
         <BorderBottomBar>
             <BorderInBottomBar>
                 <ContentBottomBar>
-                Contact: Xchange@gmail.com
+                Contact: XchangerCorp@gmail.com
                 </ContentBottomBar>
                 <img src={ojk} alt="OJK" className='imageOjk'/>
                 <ContentBottomBar>

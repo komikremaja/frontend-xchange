@@ -3,11 +3,11 @@ import { BorderLogin } from '../Styles/LoginStyle/LoginStyleComponent'
 import BorderKiriAuth from '../components/BorderAuth/BorderKiriAuth'
 import BorderKananAuth from '../components/BorderAuth/BorderKananAuth'
 
-export default function SuccessRegisterPage() {
+export default function ForgetPin() {
   return (
     <BorderLogin>
-    <BorderKiriAuth title='enjoy your exchange now!'/>
-    <BorderKananAuth currPage='SuccessRegister'/>
-  </BorderLogin>
+        <BorderKiriAuth title='Enter your email for forget pin'/>
+        <BorderKananAuth currPage='ForgetPin'/>
+    </BorderLogin>
   )
 }
