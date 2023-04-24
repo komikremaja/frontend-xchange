@@ -16,3 +16,7 @@
 .ShowDisplay{
     display: block !important;
 }
+
+.CustomBorderForm{
+    height: 400px;
+}

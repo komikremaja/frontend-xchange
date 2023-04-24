@@ -94,7 +94,7 @@ export default function FormForgetPass(props) {
 
 
     return (
-        <BorderForm className='BorderFormForgetPass'>
+        <BorderForm>
             <BorderLoading className={loadingShow}>
                 <ReactBootStrap.Spinner animation="border" className="SpinnerLoading" />
             </BorderLoading>

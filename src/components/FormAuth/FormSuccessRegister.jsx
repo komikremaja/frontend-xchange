@@ -13,7 +13,7 @@ export default function FormSuccessRegister(props) {
         );
     }
     return (
-        <BorderForm>
+        <BorderForm className='CustomBorderForm'>
             <TitleForm>
                 Success
             </TitleForm>

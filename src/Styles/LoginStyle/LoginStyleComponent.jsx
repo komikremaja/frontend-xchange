@@ -41,7 +41,7 @@ export const BorderButtonBack = styled.div`
 export const TextTitleKiri = styled.div`
 text-align: center;
 height: 10%;
-margin-top: 30px;
+margin-top: 5px;
 font-family: 'Habibi';
 font-style: normal;
 font-weight: 400;

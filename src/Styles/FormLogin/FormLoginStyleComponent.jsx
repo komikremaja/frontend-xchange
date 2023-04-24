@@ -6,7 +6,6 @@ width: 90%;
 background: #FFFCFC;
 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 border-radius: 50px;
-height: 90%;
 margin: 30px;
 `
 export const TitleForm = styled.div`
@@ -69,7 +68,7 @@ display: flex;
 justify-content: center;
 background: rgba(3, 203, 23, 0.83);
 align-items: center;
-margin: 30px 60px;
+margin: 20px 60px;
 cursor:pointer;
 `
 

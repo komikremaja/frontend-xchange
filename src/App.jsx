@@ -9,6 +9,8 @@ import ChangePassword from "./Pages/ChangePassword";
 import ForgetPin from "./Pages/ForgetPin";
 import ChangePin from "./Pages/ChangePin";
 import Dashboard from "./Pages/Dashboard";
+import AboutUs from "./Pages/AboutUs";
+import Exchange from "./Pages/Exchange";
 
 function App() {
   
@@ -16,6 +18,7 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage/>}/>
+          <Route path="/user/about-us" element={<AboutUs/>}/>
           <Route path="/user/login" element={<Login/>}/>
           <Route path="/user/register" element={<Register/>}/>
           <Route path="/user/success" element={<SuccessRegisterPage/>}/>
@@ -24,6 +27,7 @@ function App() {
           <Route path="/user/change-password/:email" element={<ChangePassword/>}/>
           <Route path="/user/change-pin/:email" element={<ChangePin/>}/>
           <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/transaction/exchange" element={<Exchange/>}/>
         </Routes>
     </BrowserRouter>
   );

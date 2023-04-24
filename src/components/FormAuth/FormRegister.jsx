@@ -147,7 +147,7 @@ const FormRegister = (props) => {
     }
 
     return (
-        <BorderForm className='BorderFormRegis'>
+        <BorderForm >
             <TitleForm>
                 Register
             </TitleForm>

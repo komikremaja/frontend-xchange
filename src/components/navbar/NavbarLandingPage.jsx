@@ -28,9 +28,11 @@ const NavbarLandingPage = (props) => {
               {menu1}
             </MenuNavbar>
           </Link>
-          <MenuNavbar>
-            {menu2}
-          </MenuNavbar>
+          <Link to={`/user/about-us`}>
+            <MenuNavbar>
+              {menu2}
+            </MenuNavbar>
+          </Link>
           <MenuNavbar>
             {menu3}
           </MenuNavbar>

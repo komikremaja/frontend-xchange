@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const BorderNavbar = styled.div`
     height: 100px;
     background-color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
     padding: 10px 120px;
 `
 export const BorderInNavbar = styled.div`
     height:100%;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: start;
 `
 
 export const BorderLogoNavbar = styled.div`
@@ -59,7 +59,7 @@ export const TextAuth = styled.div`
     font-family: 'Habibi';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 25px;
     color: #479DC2;
     display: flex;

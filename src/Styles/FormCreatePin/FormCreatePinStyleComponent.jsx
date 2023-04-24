@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BorderCreatePin = styled.div`
 position: absolute;
 width: 100%;
-height: 100%;
+height: 137%;
 background: #72727270;
 display:none;
 `

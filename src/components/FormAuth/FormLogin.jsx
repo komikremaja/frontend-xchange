@@ -18,11 +18,13 @@ export default function FormLogin(props) {
     function emailHandler(e) {
         setEmail(e.target.value);
         setEmailEmpty("");
+        setPasswordErrorShow("");
     }
 
     function passwordHandler(e) {
         setPassword(e.target.value);
         setPasswordEmpty("");
+        setPasswordErrorShow("");
     }
 
     function validationEmail() {
@@ -50,7 +52,8 @@ export default function FormLogin(props) {
                 console.log(`Response API Login`, responseLogin);
                 const user = responseLogin.data.data;
                 localStorage.setItem("user", JSON.stringify(user));
-                document.cookie = `user=${JSON.stringify(user)};expires=${new Date(Date.now() + 3600000)};path=/dashboard`;
+                document.cookie = `user=${JSON.stringify(user)}`;
+                document.cookie = `expires=${new Date(Date.now() + 3600000)}`;
                 console.log(token);
                 navigate(`/dashboard`);
             } else {
