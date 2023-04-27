@@ -1,0 +1,33 @@
+.FormInputProfile {
+    border: 1px solid #b8b8bfa3;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    background: rgb(112 176 235 / 19%);
+    align-items: center;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.ButtonSubmitProfile{
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+}
+
+.customBack{
+    height: 60px !important;
+    width: 60px !important;
+}
+
+.hide{
+    display: none;
+}
+
+.showForm{
+    display: block !important;
+}

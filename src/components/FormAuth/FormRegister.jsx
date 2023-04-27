@@ -24,6 +24,8 @@ const FormRegister = (props) => {
     const [lastNameInvalid, setLastNameInvalid] = useState();
     const [firstNameInvalid, setFirstNameInvalid] = useState();
     const [idUser, setIdUser] = useState();
+    const [messageErrorShow, setMessageErrorShow] = useState();
+    const [messageError, setMessageError] = useState();
 
 
     const navigate = useNavigate();
@@ -48,6 +50,10 @@ const FormRegister = (props) => {
         const responseRegister = await RegisterService(data);
         console.log("Response Register", responseRegister.data);
 
+        if (responseRegister.data.status === 400) {
+            setMessageErrorShow("ShowDisplay");
+            setMessageError(responseRegister.data.message);
+        }
         if (responseRegister.data.message === "Email sudah terdaftar") {
             setEmailExist("ShowDisplay");
             setEmailError(responseRegister.data.message);
@@ -63,6 +69,7 @@ const FormRegister = (props) => {
             setIdUser(responseRegister.data.data.additionalData);
             props.onIdUser(responseRegister.data.data.additionalData);
         }
+
     }
 
     function inputHandlerEmail(e) {
@@ -168,6 +175,7 @@ const FormRegister = (props) => {
                     <input type='text' placeholder='LastName' className='FormInput' onInput={inputHandlerLastName} minLength={`1`} maxLength={`30`}></input>
                     <ErrorMessageCannotEmpty className={phoneNumberEmpty}>Phone Number tidak boleh kosong</ErrorMessageCannotEmpty>
                     <input type='number' placeholder='PhoneNumber' className='FormInput' onInput={inputHandlerPhoneNumber} minLength={`5`} maxLength={`15`}></input>
+                    <ErrorMessageCannotEmpty className={messageErrorShow}>{messageError}</ErrorMessageCannotEmpty>
                     <BorderRegister className='ButtonDaftarHover'>
                         <button type='submit' className='ButtonSubmit'>Daftar</button>
                     </BorderRegister>

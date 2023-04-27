@@ -7,7 +7,7 @@ import Cookies from 'js-cookie';
 
 const NavbarDashBoard = (props) => {
     
-  const { menu1, menu2, menu3, menu4, customerName } = props;
+  const { menu1, menu2, menu3, menu4} = props;
   const navigate = useNavigate();
 
   function logoutHandler(){
@@ -40,7 +40,7 @@ const NavbarDashBoard = (props) => {
                             {menu2}
                         </MenuNavbar>
                     </Link>
-                    <Link to={``}>
+                    <Link to={`/user/profile`}>
                         <MenuNavbar>
                             {menu3}
                         </MenuNavbar>

@@ -1,0 +1,18 @@
+.buttonEdit:hover {
+    background-color: rgb(204, 134, 3);
+
+}
+
+.buttonEdit{
+    background-color: rgb(204, 134, 3);
+    color: white;
+}
+
+.buttonAdd{
+    background-color: rgba(3, 203, 23, 0.83) !important;
+    color: white;
+}
+
+.buttonAdd:hover{
+    background-color: rgba(7, 158, 22, 0.83) !important;
+}

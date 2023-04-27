@@ -11,6 +11,7 @@ import ChangePin from "./Pages/ChangePin";
 import Dashboard from "./Pages/Dashboard";
 import AboutUs from "./Pages/AboutUs";
 import Exchange from "./Pages/Exchange";
+import Profile from "./Pages/Profile";
 
 function App() {
   
@@ -27,6 +28,7 @@ function App() {
           <Route path="/user/change-password/:email" element={<ChangePassword/>}/>
           <Route path="/user/change-pin/:email" element={<ChangePin/>}/>
           <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/user/profile" element={<Profile/>}/>
           <Route path="/transaction/exchange" element={<Exchange/>}/>
         </Routes>
     </BrowserRouter>

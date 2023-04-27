@@ -5,6 +5,7 @@ export const BorderBottomBar = styled.div`
     background: rgba(116, 185, 249, 0.19);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
     padding: 10px 120px;
+    margin-top: 10px;
 `
 
 export const BorderInBottomBar = styled.div`

@@ -77,3 +77,36 @@ export const AuthService = async (data) => {
     console.log(`Responsse API login: ${response}`);
     return response;
   };
+
+  export const InquiryUser = async (data) => {
+    const url = `http://localhost:8181/user-service/inquiry-user/${data}`;
+    const response = await API({
+      url,
+      method: "get",
+      data,
+    });
+    console.log(`Responsse API Inquiry user: ${response}`);
+    return response;
+  };
+
+  export const AddRekening = async (data) => {
+    const url = `http://localhost:8181/user-service/add-account`;
+    const response = await API({
+      url,
+      method: "post",
+      data,
+    });
+    console.log(`Responsse API addRekening: ${response}`);
+    return response;
+  };
+
+  export const AddNpwp = async (data) => {
+    const url = `http://localhost:8181/user-service/add-npwp`;
+    const response = await API({
+      url,
+      method: "post",
+      data,
+    });
+    console.log(`Responsse API add npwp: ${response}`);
+    return response;
+  };

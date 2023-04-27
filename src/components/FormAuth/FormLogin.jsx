@@ -52,7 +52,7 @@ export default function FormLogin(props) {
                 console.log(`Response API Login`, responseLogin);
                 const user = responseLogin.data.data;
                 localStorage.setItem("user", JSON.stringify(user));
-                document.cookie = `user=${JSON.stringify(user)}`;
+                document.cookie = `user=${JSON.stringify(user)};expires=${new Date(Date.now() + 3600000)};path=/`;
                 document.cookie = `expires=${new Date(Date.now() + 3600000)}`;
                 console.log(token);
                 navigate(`/dashboard`);

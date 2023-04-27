@@ -140,7 +140,7 @@ export default function Dashboard() {
 
     return (
         <BodyDashboard>
-            <NavbarDashBoard menu1="Dashboard" menu2="History" menu3="Profile" menu4="Exchange" customerName={email} />
+            <NavbarDashBoard menu1="Dashboard" menu2="History" menu3="Profile" menu4="Exchange"/>
             <BorderDashboardContent>
                 {/* Border Diagram */}
                 <BorderStatisticKurs>
