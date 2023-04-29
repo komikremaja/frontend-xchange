@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BodyLandingPage = styled.div`
-    background-color: rgb(235 235 235);
+background-color: rgb(225 225 225);
 `
 export const BorderContent = styled.div`
     height: 600px;
@@ -68,12 +68,10 @@ export const BorderSubContent = styled.div`
 
 export const BorderInSubContent = styled.div`
     height: 500px;
-    background: white;
-    border: 1px solid white;
     width: 450px;
     margin: 40px 20px;
     padding: 40px;
-    box-shadow: rgba(1, 1, 1, 0.05) 4px 4px 4px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
     border-radius: 20px;
 `
 

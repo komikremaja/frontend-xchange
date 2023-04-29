@@ -110,3 +110,36 @@ export const AuthService = async (data) => {
     console.log(`Responsse API add npwp: ${response}`);
     return response;
   };
+
+  export const UpdateProfile = async (data) => {
+    const url = `http://localhost:8181/user-service/update-profile/${data.emailProps}`;
+    const response = await API({
+      url,
+      method: "put",
+      data,
+    });
+    console.log(`Responsse API update Profile: ${response}`);
+    return response;
+  };
+
+  export const InquiryRekening = async (data) => {
+    const url = `http://localhost:8181/user-service/inquiry-account/${data.currentAccountNumber}`;
+    const response = await API({
+      url,
+      method: "GET",
+      data,
+    });
+    console.log(`Responsse API inquiry rekening: ${response}`);
+    return response;
+  };
+
+  export const VerificationEmail = async (data) => {
+    const url = `http://localhost:8181/user-service/verification-email`;
+    const response = await API({
+      url,
+      method: "POST",
+      data,
+    });
+    console.log(`Responsse API Verification Email: ${response}`);
+    return response;
+  };

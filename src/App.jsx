@@ -12,6 +12,7 @@ import Dashboard from "./Pages/Dashboard";
 import AboutUs from "./Pages/AboutUs";
 import Exchange from "./Pages/Exchange";
 import Profile from "./Pages/Profile";
+import VerificationEmail from "./Pages/VerificationEmail";
 
 function App() {
   
@@ -29,6 +30,7 @@ function App() {
           <Route path="/user/change-pin/:email" element={<ChangePin/>}/>
           <Route path="/dashboard" element={<Dashboard/>}/>
           <Route path="/user/profile" element={<Profile/>}/>
+          <Route path="/user/verification-email/:email" element={<VerificationEmail/>}/>
           <Route path="/transaction/exchange" element={<Exchange/>}/>
         </Routes>
     </BrowserRouter>

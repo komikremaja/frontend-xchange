@@ -14,7 +14,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 4px;
-background-color: rgb(98 180 219 / 52%);;
+background-color: rgb(2 65 94 / 52%);
 flex-direction:column;
 `
 
@@ -66,6 +66,7 @@ export const BorderBankInContent = styled.div`
 width: 300px;
 border-radius: 20px;
 box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
+background: #dfdfdf;
 `
 export const BorderTitleBankContent = styled.div`
 height: 20%;
@@ -93,7 +94,7 @@ width: 170px;
 export const BorderKursBank = styled.div`
 margin-top: 30px;
 flex-wrap: wrap;
-justify-content: space-between;
+justify-content: space-around;
 height: 60%;
 display: flex;
 padding: 0px 10px;

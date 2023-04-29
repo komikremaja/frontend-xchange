@@ -5,7 +5,7 @@ background-color: white;
 box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 4px;
 border-radius: 20px;
 padding: 20px;
-height: 650px;
+height: 880px;
 width: 900px;
 margin: 0px auto;
 margin-top: 20px;

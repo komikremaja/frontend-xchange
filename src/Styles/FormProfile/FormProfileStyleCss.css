@@ -19,6 +19,14 @@
     font-size: 20px;
 }
 
+
+.ButtonEdit{
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+}
+
 .customBack{
     height: 60px !important;
     width: 60px !important;
@@ -30,4 +38,8 @@
 
 .showForm{
     display: block !important;
+}
+
+.showLoading{
+    display: flex !important;
 }
