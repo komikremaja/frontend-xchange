@@ -1,0 +1,26 @@
+.moneyTitle{
+    color: #23b1da;
+}
+
+.clickedKurs{
+    border: 3px #17bee3 solid;
+    cursor: pointer;
+}
+
+.hideDescription{
+    display: none !important;
+}
+
+.FormInputExchange {
+    border: 1px solid #b8b8bfa3;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    background: rgba(108, 172, 233, 0.459);
+    align-items: center;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 20px;
+    outline: none;
+}

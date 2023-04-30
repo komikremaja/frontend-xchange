@@ -21,12 +21,6 @@ export default function Dashboard() {
     const [kursBCA, setKursBCA] = useState();
     const [kursBRI, setKursBRI] = useState();
     const [kursMandiri, setKursMandiri] = useState();
-    const [bcaUSDIDRB, setBcaUSDIDRB] = useState();
-    const [bcaUSDIDRS, setBcaUSDIDRS] = useState();
-    const [bcaSGDIDRB, setBcaSGDIDRB] = useState();
-    const [bcaSGDIDRS, setBcaSGDIDRS] = useState();
-    const [bcaAUDIDRB, setBcaAUDIDRB] = useState();
-    const [bcaAUDIDRS, setBcaAUDIDRS] = useState();
 
 
     const userCookie = Cookies.get('user');
@@ -218,10 +212,10 @@ export default function Dashboard() {
                                         AUD/IDR
                                     </AmountKurs>
                                     <AmountKurs>
-                                        {kursBCA ? kursBCA.data[3].kursMarginBuy : "0"}|B
+                                        {kursBCA ? kursBCA.data[4].kursMarginBuy : "0"}|B
                                     </AmountKurs>
                                     <AmountKurs>
-                                        {kursBCA ? kursBCA.data[3].kursMarginSell : "0"}|S
+                                        {kursBCA ? kursBCA.data[4].kursMarginSell : "0"}|S
                                     </AmountKurs>
                                 </CurrencyKursRate>
 
@@ -230,10 +224,10 @@ export default function Dashboard() {
                                         EUR/IDR
                                     </AmountKurs>
                                     <AmountKurs>
-                                        {kursBCA ? kursBCA.data[4].kursMarginBuy : "0"}|B
+                                        {kursBCA ? kursBCA.data[3].kursMarginBuy : "0"}|B
                                     </AmountKurs>
                                     <AmountKurs>
-                                        {kursBCA ? kursBCA.data[4].kursMarginSell : "0"}|S
+                                        {kursBCA ? kursBCA.data[3].kursMarginSell : "0"}|S
                                     </AmountKurs>
                                 </CurrencyKursRate>
 
@@ -276,10 +270,10 @@ export default function Dashboard() {
                                         AUD/IDR
                                     </AmountKurs>
                                     <AmountKurs>
-                                        {kursBRI ? kursBRI.data[3].kursMarginBuy : "0"}|B
+                                        {kursBRI ? kursBRI.data[4].kursMarginBuy : "0"}|B
                                     </AmountKurs>
                                     <AmountKurs>
-                                        {kursBRI ? kursBRI.data[3].kursMarginSell : "0"}|S
+                                        {kursBRI ? kursBRI.data[4].kursMarginSell : "0"}|S
                                     </AmountKurs>
                                 </CurrencyKursRate>
 
@@ -288,10 +282,10 @@ export default function Dashboard() {
                                         EUR/IDR
                                     </AmountKurs>
                                     <AmountKurs>
-                                        {kursBRI ? kursBRI.data[4].kursMarginBuy : "0"}|B
+                                        {kursBRI ? kursBRI.data[3].kursMarginBuy : "0"}|B
                                     </AmountKurs>
                                     <AmountKurs>
-                                        {kursBRI ? kursBRI.data[4].kursMarginSell : "0"}|S
+                                        {kursBRI ? kursBRI.data[3].kursMarginSell : "0"}|S
                                     </AmountKurs>
                                 </CurrencyKursRate>
 
@@ -334,10 +328,10 @@ export default function Dashboard() {
                                         AUD/IDR
                                     </AmountKurs>
                                     <AmountKurs>
-                                        {kursMandiri ? kursMandiri.data[3].kursMarginBuy : "0"}|B
+                                        {kursMandiri ? kursMandiri.data[4].kursMarginBuy : "0"}|B
                                     </AmountKurs>
                                     <AmountKurs>
-                                        {kursMandiri ? kursMandiri.data[3].kursMarginSell : "0"}|S
+                                        {kursMandiri ? kursMandiri.data[4].kursMarginSell : "0"}|S
                                     </AmountKurs>
                                 </CurrencyKursRate>
 
@@ -346,10 +340,10 @@ export default function Dashboard() {
                                         EUR/IDR
                                     </AmountKurs>
                                     <AmountKurs>
-                                        {kursMandiri ? kursMandiri.data[4].kursMarginBuy : "0"}|B
+                                        {kursMandiri ? kursMandiri.data[3].kursMarginBuy : "0"}|B
                                     </AmountKurs>
                                     <AmountKurs>
-                                        {kursMandiri ? kursMandiri.data[4].kursMarginSell : "0"}|S
+                                        {kursMandiri ? kursMandiri.data[3].kursMarginSell : "0"}|S
                                     </AmountKurs>
                                 </CurrencyKursRate>
 

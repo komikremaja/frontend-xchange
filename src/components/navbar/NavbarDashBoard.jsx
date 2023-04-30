@@ -45,7 +45,7 @@ const NavbarDashBoard = (props) => {
                             {menu3}
                         </MenuNavbar>
                     </Link>
-                    <Link to={`/transaction/exchange`}>
+                    <Link to={`/kurs-rate`}>
                         <MenuNavbar>
                             {menu4}
                         </MenuNavbar>

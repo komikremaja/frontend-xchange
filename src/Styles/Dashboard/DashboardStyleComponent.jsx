@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BodyDashboard = styled.div`
-    background-color: rgb(235 235 235);
+    background-color: rgb(229 229 229);
 `
 
 export const BorderTextNameCustomer = styled.div`
@@ -61,6 +61,7 @@ border-radius: 20px;
 box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px;
 background-color: #e5e5e3;
 padding: 0px 20px 0px 20px;
+margin-top:20px;
 `
 
 export const BorderTitleKursRateBank = styled.div`
