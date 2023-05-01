@@ -143,3 +143,14 @@ export const AuthService = async (data) => {
     console.log(`Responsse API Verification Email: ${response}`);
     return response;
   };
+
+  export const CheckPin = async (data) => {
+    const url = `http://localhost:8181/user-service/check-pin/${data.email}`;
+    const response = await API({
+      url,
+      method: "POST",
+      data,
+    });
+    console.log(`Responsse API check pin: ${response}`);
+    return response;
+  };

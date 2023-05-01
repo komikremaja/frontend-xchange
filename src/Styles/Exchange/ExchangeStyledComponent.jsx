@@ -8,7 +8,6 @@ padding: 20px;
 width: 900px;
 margin: 0px auto;
 margin-top: 20px;
-height: 990px;
 `;
 
 export const TitleExchanged = styled.div`
@@ -115,6 +114,54 @@ margin-bottom: 20px;
 `;
 
 
+export const ButtonLanjut = styled.div`
+height: 60px;
+    width: 400px;
+    border-radius: 30px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: rgb(80, 169, 252);
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px 30px;
+`;
 
 
+export const BorderEnterPin = styled.div`
+position: absolute;
+    width: 860px;
+    height: 720px;
+    background: rgb(206 217 217);
+    border-radius: 30px;
+    padding: 30px;
+    display:none;
+`
+export const BorderTitle = styled.div`
+width: 100%;
+height: 60px;
+display:flex;
+align-items:center;
+`
 
+export const TitleEnterPin = styled.div`
+width: 85%;
+height: 60px;
+-webkit-box-align: center;
+font-size: 25px;
+margin-top: 25px;
+font-family: cursive;
+text-align: center;
+`
+export const BorderEnterPinInput = styled.div`
+height: 150px;
+border-radius: 20px;
+display: flex;
+justify-content: center;
+background: rgb(255 255 255);
+align-items: center;
+text-align: center;
+margin: 60px 165px;
+outline: none;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 8px;
+`

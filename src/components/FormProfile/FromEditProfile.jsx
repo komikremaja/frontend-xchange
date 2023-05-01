@@ -60,6 +60,7 @@ export default function FromEditProfile(props) {
         if (responseInquiryRekening.data.status === 200) {
             setInquiryRekeningSuccess(true);
             setIdAccount(responseInquiryRekening.data.data.idAccount);
+            console.log(responseInquiryRekening.data.data.idAccount);
         }
 
     }
@@ -120,8 +121,11 @@ export default function FromEditProfile(props) {
         validationEditAccount();
         if (currentAccountNumber !== '') {
             inquiryRekeningApi();
-        }
-        if (inquiryRekeningSuccess !== false) {
+            console.log(idAccount);
+            if(idAccount !== undefined){
+                editProfile();
+            }
+        }else{
             editProfile();
         }
     }

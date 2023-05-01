@@ -4,6 +4,7 @@ import NavbarDashBoard from '../components/navbar/NavbarDashBoard'
 import { ExchangeContainer, TitleExchanged } from '../Styles/Exchange/ExchangeStyledComponent'
 import '../Styles/Exchange/ExchangeStyledCss.css';
 import FormExchange from '../components/FormExchange/FormExchange';
+import BottomBarPage from '../components/BottomBar/BottomBarPage';
 
 export default function Exchange() {
   return (
@@ -13,6 +14,7 @@ export default function Exchange() {
         <TitleExchanged>Exchange <span className="moneyTitle"> Money </span></TitleExchanged>
         <FormExchange currentPage="Kurs" subTitle="Klik pada kurs transaksi yang anda inginkan"/>
       </ExchangeContainer>
+      <BottomBarPage/>
     </BodyDashboard>
   )
 }

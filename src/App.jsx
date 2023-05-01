@@ -14,6 +14,7 @@ import Exchange from "./Pages/Exchange";
 import Profile from "./Pages/Profile";
 import VerificationEmail from "./Pages/VerificationEmail";
 import ExchangeTransaction from "./Pages/ExchangeTransaction";
+import Payment from "./Pages/Payment";
 
 function App() {
   
@@ -34,6 +35,7 @@ function App() {
           <Route path="/user/verification-email/:email" element={<VerificationEmail/>}/>
           <Route path="/kurs-rate" element={<Exchange/>}/>
           <Route path="/transaction/exchange" element={<ExchangeTransaction/>}/>
+          <Route path="/payment" element={<Payment/>}/>
         </Routes>
     </BrowserRouter>
   );

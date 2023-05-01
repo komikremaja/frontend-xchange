@@ -116,7 +116,7 @@ export default function FormExchange(props) {
             </DescriptionKursText>
             {/* Kurs Bank */}
             <KursBank currentPage={currentPage} inquiryKurs={inquiryKurs} kursBCA={kursBCA} kursBRI={kursBRI} kursMandiri={kursMandiri} />
-            <FormTransactionExchange currentPage={currentPage}/>
+            <FormTransactionExchange currentPage={currentPage} />
 
         </ContentExchangeContainer>
     )

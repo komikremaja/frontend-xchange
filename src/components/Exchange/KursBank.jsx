@@ -58,7 +58,7 @@ export default function KursBank(props) {
             currency: "USD/IDR",
             kursBuy: kursBCA.data[1].kursMarginBuy,
             kursSell: kursBCA.data[1].kursMarginSell,
-            bankTpye: "BCA"
+            bankType: "BCA"
         }
         setdDataExchange(data);
         setButtonDisabled(false);
@@ -85,7 +85,7 @@ export default function KursBank(props) {
             currency: "SGD/IDR",
             kursBuy: kursBCA.data[2].kursMarginBuy,
             kursSell: kursBCA.data[2].kursMarginSell,
-            bankTpye: "BCA"
+            bankType: "BCA"
         }
         setdDataExchange(data);
         setButtonDisabled(false);
@@ -112,7 +112,7 @@ export default function KursBank(props) {
             currency: "AUD/IDR",
             kursBuy: kursBCA.data[4].kursMarginBuy,
             kursSell: kursBCA.data[4].kursMarginSell,
-            bankTpye: "BCA"
+            bankType: "BCA"
         }
         setdDataExchange(data);
         setButtonDisabled(false);
@@ -139,7 +139,7 @@ export default function KursBank(props) {
             currency: "EUR/IDR",
             kursBuy: kursBCA.data[3].kursMarginBuy,
             kursSell: kursBCA.data[3].kursMarginSell,
-            bankTpye: "BCA"
+            bankType: "BCA"
         }
         setdDataExchange(data);
         setButtonDisabled(false);
@@ -166,7 +166,7 @@ export default function KursBank(props) {
             currency: "USD/IDR",
             kursBuy: kursBRI.data[1].kursMarginBuy,
             kursSell: kursBRI.data[1].kursMarginSell,
-            bankTpye: "BRI"
+            bankType: "BRI"
         }
         setdDataExchange(data);
         setButtonDisabled(false);
@@ -193,7 +193,7 @@ export default function KursBank(props) {
             currency: "SGD/IDR",
             kursBuy: kursBRI.data[2].kursMarginBuy,
             kursSell: kursBRI.data[2].kursMarginSell,
-            bankTpye: "BRI"
+            bankType: "BRI"
         }
         setdDataExchange(data);
         setButtonDisabled(false);
@@ -220,7 +220,7 @@ export default function KursBank(props) {
             currency: "AUD/IDR",
             kursBuy: kursBRI.data[4].kursMarginBuy,
             kursSell: kursBRI.data[4].kursMarginSell,
-            bankTpye: "BRI"
+            bankType: "BRI"
         }
         setdDataExchange(data);
         setButtonDisabled(false);
@@ -247,7 +247,7 @@ export default function KursBank(props) {
             currency: "EEUR/IDR",
             kursBuy: kursBRI.data[3].kursMarginBuy,
             kursSell: kursBRI.data[3].kursMarginSell,
-            bankTpye: "BRI"
+            bankType: "BRI"
         }
         setdDataExchange(data);
         setButtonDisabled(false);
@@ -274,7 +274,7 @@ export default function KursBank(props) {
             currency: "USD/IDR",
             kursBuy: kursMandiri.data[1].kursMarginBuy,
             kursSell: kursMandiri.data[1].kursMarginSell,
-            bankTpye: "Mandiri"
+            bankType: "Mandiri"
         }
         setdDataExchange(data);
         setButtonDisabled(false);
@@ -301,7 +301,7 @@ export default function KursBank(props) {
             currency: "SGD/IDR",
             kursBuy: kursMandiri.data[2].kursMarginBuy,
             kursSell: kursMandiri.data[2].kursMarginSell,
-            bankTpye: "Mandiri"
+            bankType: "Mandiri"
         }
         setdDataExchange(data);
         setButtonDisabled(false);
@@ -328,7 +328,7 @@ export default function KursBank(props) {
             currency: "AUD/IDR",
             kursBuy: kursMandiri.data[4].kursMarginBuy,
             kursSell: kursMandiri.data[4].kursMarginSell,
-            bankTpye: "Mandiri"
+            bankType: "Mandiri"
         }
         setdDataExchange(data);
         setButtonDisabled(false);
@@ -355,7 +355,7 @@ export default function KursBank(props) {
             currency: "EUR/IDR",
             kursBuy: kursMandiri.data[3].kursMarginBuy,
             kursSell: kursMandiri.data[3].kursMarginSell,
-            bankTpye: "Mandiri"
+            bankType: "Mandiri"
         }
         setdDataExchange(data);
         setButtonDisabled(false);
