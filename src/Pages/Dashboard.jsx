@@ -82,21 +82,19 @@ export default function Dashboard() {
     }, []);
 
     useEffect(() => {
-        
+
         const interval = setInterval(() => {
             // Update myState every 30 seconds
-            inquiryKursDiagram();
+            if (!dataKursDiagram) {
+                inquiryKursDiagram();
+            }
             if (dataKursDiagram) {
                 parsingDataKursDiagram();
             }
 
-           
-            // console.log("Kurs BCA: ", kursBCA);
-            // console.log("Kurs BRI: ", kursBRI);
-            // console.log("Kurs Mandiri: ", kursMandiri);
-        }, 100);
+        }, 500);
         return () => clearInterval(interval);
-    });
+    }, [dataKursDiagram]);
 
     const parsingDataKursDiagram = () => {
         var resultJual = {};
@@ -134,7 +132,7 @@ export default function Dashboard() {
 
     return (
         <BodyDashboard>
-            <NavbarDashBoard menu1="Dashboard" menu2="History" menu3="Profile" menu4="Exchange"/>
+            <NavbarDashBoard menu1="Dashboard" menu2="History" menu3="Profile" menu4="Exchange" />
             <BorderDashboardContent>
                 {/* Border Diagram */}
                 <BorderStatisticKurs>

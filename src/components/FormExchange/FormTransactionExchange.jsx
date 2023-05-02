@@ -12,7 +12,6 @@ import { ExchcangeService } from '../../Services/TransactionService';
 import { useNavigate } from 'react-router-dom';
 
 export default function FormTransactionExchange(props) {
-
     const [show, setShow] = useState(false);
     const { currentPage } = props;
     const [typeTransaction, setTypeTransaction] = useState();
@@ -86,21 +85,36 @@ export default function FormTransactionExchange(props) {
         // console.log(listDataAccount);
     }
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setEmail(user.email);
-            // Update myState every 30 seconds
-            inquiryUser();
-            // console.log(amount1);
-            setDataOrder(JSON.parse(localStorage.getItem('data')));
-            if (dataOrder) {
-                setCurrencies(dataOrder.currency.split("/"));
-                setCurrencyPair(dataOrder.currency);
-                setBankname(dataOrder.bankType);
-            }
 
-        }, 500);
-        return () => clearInterval(interval);
+    useEffect(() => {
+        if (currentPage === 'Exchange') {
+            const dataLs = localStorage.getItem('data');
+            if (dataLs === null) {
+                navigate(`/kurs-rate`);
+            }
+            const interval = setInterval(() => {
+                console.log("test");
+                setEmail(user.email);
+                // Update myState every 30 seconds
+                if (customerName === undefined) {
+                    console.log("Inquiry User");
+                    inquiryUser();
+                }
+                // console.log(amount1);
+                if (dataOrder === undefined) {
+                    console.log("get data order");
+                    setDataOrder(JSON.parse(localStorage.getItem('data')));
+                }
+                if (dataOrder) {
+                    setCurrencies(dataOrder.currency.split("/"));
+                    setCurrencyPair(dataOrder.currency);
+                    setBankname(dataOrder.bankType);
+                }
+
+            }, 500);
+            return () => clearInterval(interval);
+        }
+
     });
     if (currentPage !== 'Exchange') {
         return (
@@ -248,10 +262,8 @@ export default function FormTransactionExchange(props) {
             pin
         }
         const responseCheckPin = await CheckPin(data);
-        console.log(responseCheckPin);
         if (responseCheckPin.data.status === 400) {
             setPinErrorShow('showForm');
-            console.log(pinErrorShow);
             setPinErrorMessage(responseCheckPin.data.message);
         }
         if (responseCheckPin.data.status === 200) {
@@ -276,9 +288,7 @@ export default function FormTransactionExchange(props) {
             comments,
             nic
         }
-        console.log(data);
         const responseExchange = await ExchcangeService(data);
-        console.log(responseExchange.data);
 
         if (responseExchange.data.status > 200) {
             setErrorExchangeShow('showForm');

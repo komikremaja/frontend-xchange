@@ -1,0 +1,11 @@
+.showUpForm{
+    display: block !important;
+}
+
+.hideForm{
+    display: none;
+}
+
+.imageSuccessSize{
+    height: 120px;
+}

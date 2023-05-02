@@ -35,7 +35,7 @@ const NavbarDashBoard = (props) => {
                             {menu1}
                         </MenuNavbar>
                     </Link>
-                    <Link to={``}>
+                    <Link to={`/transaction/history-transaction`}>
                         <MenuNavbar>
                             {menu2}
                         </MenuNavbar>

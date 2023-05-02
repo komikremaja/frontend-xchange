@@ -15,6 +15,7 @@ import Profile from "./Pages/Profile";
 import VerificationEmail from "./Pages/VerificationEmail";
 import ExchangeTransaction from "./Pages/ExchangeTransaction";
 import Payment from "./Pages/Payment";
+import HistoryTransaction from "./Pages/HistoryTransaction";
 
 function App() {
   
@@ -36,6 +37,7 @@ function App() {
           <Route path="/kurs-rate" element={<Exchange/>}/>
           <Route path="/transaction/exchange" element={<ExchangeTransaction/>}/>
           <Route path="/payment" element={<Payment/>}/>
+          <Route path="/transaction/history-transaction" element={<HistoryTransaction/>}/>
         </Routes>
     </BrowserRouter>
   );

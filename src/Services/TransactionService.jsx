@@ -10,3 +10,25 @@ export const ExchcangeService = async (data) => {
     console.log(`Responsse API Transaction : ${response}`);
     return response;
 }
+
+export const InquiryTransaction = async (data) => {
+    const url = `http://localhost:8383/transaction-service/inquiry/transaction/${data.vaNumber}`;
+    const response = await API({
+        url,
+        method: "get",
+        data
+    });
+    console.log(`Responsse API Inquiry Transaction : ${response}`);
+    return response;
+}
+
+export const ReconPaymentStatus = async (data) => {
+    const url = `http://localhost:8383/transaction-service/recon/payment-status`;
+    const response = await API({
+        url,
+        method: "post",
+        data
+    });
+    console.log(`Responsse API Recon : ${response}`);
+    return response;
+}

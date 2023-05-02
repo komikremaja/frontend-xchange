@@ -244,7 +244,7 @@ export default function KursBank(props) {
         setMandiriEur('');
 
         const data = {
-            currency: "EEUR/IDR",
+            currency: "EUR/IDR",
             kursBuy: kursBRI.data[3].kursMarginBuy,
             kursSell: kursBRI.data[3].kursMarginSell,
             bankType: "BRI"
@@ -365,7 +365,6 @@ export default function KursBank(props) {
     function clickLanjut(){
         localStorage.setItem("data", JSON.stringify(dataExchange));
         navigate(`/transaction/exchange`)
-        console.log("clicked");
     }
 
     return (
