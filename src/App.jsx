@@ -16,6 +16,7 @@ import VerificationEmail from "./Pages/VerificationEmail";
 import ExchangeTransaction from "./Pages/ExchangeTransaction";
 import Payment from "./Pages/Payment";
 import HistoryTransaction from "./Pages/HistoryTransaction";
+import DetailHistory from "./Pages/DetailHistory";
 
 function App() {
   
@@ -38,6 +39,7 @@ function App() {
           <Route path="/transaction/exchange" element={<ExchangeTransaction/>}/>
           <Route path="/payment" element={<Payment/>}/>
           <Route path="/transaction/history-transaction" element={<HistoryTransaction/>}/>
+          <Route path="/transaction/history-transaction/detail/:vaNumber" element={<DetailHistory/>}/>
         </Routes>
     </BrowserRouter>
   );

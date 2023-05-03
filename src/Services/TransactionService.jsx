@@ -32,3 +32,25 @@ export const ReconPaymentStatus = async (data) => {
     console.log(`Responsse API Recon : ${response}`);
     return response;
 }
+
+export const InquiryListHistoryTransaction = async (data) => {
+    const url = `http://localhost:8383/transaction-service/history-transaction/list/${data.nic}`;
+    const response = await API({
+        url,
+        method: "get",
+        data
+    });
+    console.log(`Responsse API history transaction : ${response}`);
+    return response;
+}
+
+export const InquiryDetailTransaction = async (data) => {
+    const url = `http://localhost:8383/transaction-service/history-transaction/${data}`;
+    const response = await API({
+        url,
+        method: "get",
+        data
+    });
+    console.log(`Responsse API history transaction : ${response}`);
+    return response;
+}
