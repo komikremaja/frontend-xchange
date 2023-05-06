@@ -75,6 +75,12 @@ margin-top:20px;
 display:none;
 `
 
+export const noHistoryTransaction = styled.div`
+height:100%;
+width:100%;
+color:red;
+`
+
 const TransactionMapping = ({ transactions }) => {
     const navigate = useNavigate();
 
@@ -82,9 +88,14 @@ const TransactionMapping = ({ transactions }) => {
     function clickDetailTransaction(vaNumber){
         navigate(`/transaction/history-transaction/detail/${vaNumber}`);
     }
+
+    useEffect(() => {
+
+        console.log(transactions);
+      });
     return (
         <ContainerListTransaction>
-            {transactions.map((transaction) => (
+            {Array.isArray(transactions) && transactions.length > 0 ? transactions.map((transaction) => (
                 <SingleContainerHistoryTransaction className="HistoryList" onClickCapture={() => clickDetailTransaction(transaction.vaNumber)}>
                     <SingleContainerLeftField key={transaction.vaNumbber}>
                         <Field>
@@ -106,7 +117,7 @@ const TransactionMapping = ({ transactions }) => {
                         </Field>
                     </SingleContainerRightField>
                 </SingleContainerHistoryTransaction>
-            ))}
+            )): <div className="NoHistoryTransaction">You dont have any transaction history</div>}
 
         </ContainerListTransaction>
     );

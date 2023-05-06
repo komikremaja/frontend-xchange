@@ -25,8 +25,8 @@ export default function HistoryTransaction() {
 
   const inquiryUserApi = async () => {
     const inquiryUserResponse = await InquiryUser(email);
-    setNic(inquiryUserResponse.data.data.userAccount[0].nic);
-    console.log(nic);
+    console.log(inquiryUserResponse.data);
+    setNic(inquiryUserResponse.data.data.userAccount !== null ? inquiryUserResponse.data.data.userAccount[0].nic : undefined);
   }
 
   const historyTransactionList = async () => {
@@ -111,7 +111,7 @@ export default function HistoryTransaction() {
           </ContainerDescriptionKurs>
         </ContentPaymentContainer>
         <ContainerListTransaction>
-          <TransactionMapping transactions={dataListTransaksi} />
+          <TransactionMapping transactions={dataListTransaksi.length !== 0 ? dataListTransaksi : null} />
         </ContainerListTransaction>
       </HistoryTransactionContainer>
     </BodyDashboard>

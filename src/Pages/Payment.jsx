@@ -127,11 +127,7 @@ export default function Payment() {
 
   function clickUpdate() {
     inquiryPaymentApi();
-    if (remainingTime === '00:00') {
-      console.log(remainingTime);
-      setShowRincianPembayaran('hideForm');
-      setShowFailed('showUpForm');
-    } else if (paymentStatus === '3') {
+    if (paymentStatus === '3') {
       setShowRincianPembayaran('hideForm');
       setShowSuccess('showUpForm');
       reconPaymentApi();
@@ -139,6 +135,10 @@ export default function Payment() {
       setShowRincianPembayaran('hideForm');
       setShowFailed('showUpForm');
       reconPaymentApi();
+    } if (remainingTime === '00:00') {
+      console.log(remainingTime);
+      setShowRincianPembayaran('hideForm');
+      setShowFailed('showUpForm');
     } else {
       setShowWaitingPayment('showUpForm');
     }

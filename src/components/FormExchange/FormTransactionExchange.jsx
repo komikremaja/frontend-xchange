@@ -53,6 +53,8 @@ export default function FormTransactionExchange(props) {
 
     const [errorExchangeShow, setErrorExchangeShow] = useState('');
     const [errorExchange, setErrorExchange] = useState('');
+    const [paymentMethod, setPaymentMethod] = useState('');
+    const [paymentMethodEmpty, setPaymentMethodEmpty] = useState('');
 
 
     const userCookie = Cookies.get('user');
@@ -194,6 +196,11 @@ export default function FormTransactionExchange(props) {
         console.log(e.target.value);
     }
 
+    function handlePaymentMethod(e) {
+        setPaymentMethod(e.target.value);
+        console.log(e.target.value);
+    }
+
     function validationTransactionType() {
         if (typeTransaction === undefined || typeTransaction === '') {
             setTypeTransactionEmpty('showForm');
@@ -231,7 +238,7 @@ export default function FormTransactionExchange(props) {
     function submitForm(e) {
         e.preventDefault();
         console.log(amount1Empty);
-        if (validationTransactionType() === true && validationAmount1() === true && validationDestinationAccount() === true) {
+        if (validationTransactionType() === true && validationAmount1() === true && validationDestinationAccount() === true && validationPaymentMethod() === true) {
             setEnterPinShow('showForm');
         }
     }
@@ -251,6 +258,14 @@ export default function FormTransactionExchange(props) {
     function validationPin() {
         if (pin === undefined || pin === '') {
             setPinEmpty('showForm');
+            return false;
+        }
+        return true;
+    }
+
+    function validationPaymentMethod() {
+        if (paymentMethod === undefined || paymentMethod === '') {
+            setPaymentMethodEmpty('showForm');
             return false;
         }
         return true;
@@ -284,6 +299,7 @@ export default function FormTransactionExchange(props) {
             amount2,
             rateKurs,
             typeTransaction,
+            paymentMethod,
             bankName,
             comments,
             nic
@@ -308,6 +324,7 @@ export default function FormTransactionExchange(props) {
     }
 
     const typeTransactions = ['Buy', 'Sell'];
+    const paymentMethods = ['BCA', 'BRI', 'Mandiri'];
 
     return (
         <ContentExchangeContainer>
@@ -376,6 +393,16 @@ export default function FormTransactionExchange(props) {
                     <option value="">-- Pilih Rekening Tujuan --</option>
                     {multiAccount.map((rekening) => (
                         <option key={rekening.accountNumber} value={`${rekening.accountNumber}-${rekening.bankType}-${rekening.typeAccount}`}>{rekening.accountNumber} - {rekening.bankType} - {rekening.typeAccount}</option>
+                    ))}
+                </select>
+                <ErrorMessageCannotEmpty className={paymentMethodEmpty}>Jenis Transaksi tidak boleh kosong</ErrorMessageCannotEmpty>
+                <LableInputExchange>
+                    Payment Method
+                </LableInputExchange>
+                <select id="typeTransaction" value={paymentMethod} className='FormInputExchange' onChange={handlePaymentMethod}>
+                    <option value="">-- Pilih Payment Method --</option>
+                    {paymentMethods.map((paymentMethod) => (
+                        <option key={paymentMethod} value={`${paymentMethod}`}>{paymentMethod}</option>
                     ))}
                 </select>
 

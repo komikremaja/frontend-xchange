@@ -34,7 +34,8 @@ export default function Profile() {
     const user = userCookie ? JSON.parse(userCookie) : null;
 
     const inquiryUser = async () => {
-        const responseInquiryUser = await InquiryUser(user.email);
+        const responseInquiryUser = await InquiryUser(user.email); 
+        console.log(responseInquiryUser);
         setUsername(responseInquiryUser.data.data.userName);
         setFirstName(responseInquiryUser.data.data.userDetail.firstName);
         setLastName(responseInquiryUser.data.data.userDetail.lastName);
