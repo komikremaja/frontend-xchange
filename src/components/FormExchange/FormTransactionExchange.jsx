@@ -29,6 +29,7 @@ export default function FormTransactionExchange(props) {
     const [destinationAccount, setDestinationAccount] = useState();
     const [comments, setComments] = useState();
     const [npwp, setNpwp] = useState();
+    const [npwpEmpty, setNpwpEmpty] = useState();
     const [customerName, setCustomerName] = useState();
     const [typeTransactionEmpty, setTypeTransactionEmpty] = useState();
     const [currencyPair, setCurrencyPair] = useState();
@@ -238,7 +239,7 @@ export default function FormTransactionExchange(props) {
     function submitForm(e) {
         e.preventDefault();
         console.log(amount1Empty);
-        if (validationTransactionType() === true && validationAmount1() === true && validationDestinationAccount() === true && validationPaymentMethod() === true) {
+        if (validationTransactionType() === true && validationAmount1() === true && validationDestinationAccount() === true && validationPaymentMethod() === true && validationNpwp() === true) {
             setEnterPinShow('showForm');
         }
     }
@@ -258,6 +259,14 @@ export default function FormTransactionExchange(props) {
     function validationPin() {
         if (pin === undefined || pin === '') {
             setPinEmpty('showForm');
+            return false;
+        }
+        return true;
+    }
+
+    function validationNpwp() {
+        if (npwp === undefined || npwp === '') {
+            setNpwpEmpty('showForm');
             return false;
         }
         return true;
@@ -305,8 +314,8 @@ export default function FormTransactionExchange(props) {
             nic
         }
         const responseExchange = await ExchcangeService(data);
-
-        if (responseExchange.data.status > 200) {
+        
+        if (responseExchange.data.status === 400) {
             setErrorExchangeShow('showForm');
             setErrorExchange(responseExchange.data.data.message);
         }
@@ -340,7 +349,7 @@ export default function FormTransactionExchange(props) {
                     </BorderEnterPinInput>
                     <ErrorMessageCannotEmpty className={pinErrorShow}>{pinErrorMessage}</ErrorMessageCannotEmpty>
                     <BorderBuatPin>
-                        <button type='submit' className='ButtonSubmit'>Buat Pin</button>
+                        <button type='submit' className='ButtonSubmit'>Submit Pin</button>
                     </BorderBuatPin>
                 </form>
             </BorderEnterPin>
@@ -411,6 +420,7 @@ export default function FormTransactionExchange(props) {
                 </LableInputExchange>
                 <input type='text' placeholder={`Note Transaksi`} className='FormInputExchange' maxLength="50" onChange={handleComments} />
                 <ErrorMessageCannotEmpty className={errorExchangeShow}>{errorExchange}</ErrorMessageCannotEmpty>
+                <ErrorMessageCannotEmpty className={npwpEmpty}>Silahkan daftar NPWP anda terlebih dahulu</ErrorMessageCannotEmpty>
                 <ButtonLanjut className='ButtonSubmitHover'>
                     <button className='ButtonSubmit'>Lanjut</button>
                 </ButtonLanjut>

@@ -30,9 +30,9 @@ export default function KursBank(props) {
     const [mandiriEur, setMandiriEur] = useState();
 
     const navigate = useNavigate();
-    
-    if(currentPage !== "Kurs"){
-        return(
+
+    if (currentPage !== "Kurs") {
+        return (
             <div></div>
         );
     }
@@ -56,8 +56,8 @@ export default function KursBank(props) {
 
         const data = {
             currency: "USD/IDR",
-            kursBuy: kursBCA.data[1].kursMarginBuy,
-            kursSell: kursBCA.data[1].kursMarginSell,
+            kursBuy: kursBCA ? kursBCA.data[1].kursMarginBuy : 0,
+            kursSell: kursBCA ? kursBCA.data[1].kursMarginSell : 0,
             bankType: "BCA"
         }
         setdDataExchange(data);
@@ -83,8 +83,8 @@ export default function KursBank(props) {
 
         const data = {
             currency: "SGD/IDR",
-            kursBuy: kursBCA.data[2].kursMarginBuy,
-            kursSell: kursBCA.data[2].kursMarginSell,
+            kursBuy:  kursBCA ? kursBCA.data[2].kursMarginBuy:0,
+            kursSell:  kursBCA ? kursBCA.data[2].kursMarginSell:0,
             bankType: "BCA"
         }
         setdDataExchange(data);
@@ -110,8 +110,8 @@ export default function KursBank(props) {
 
         const data = {
             currency: "AUD/IDR",
-            kursBuy: kursBCA.data[4].kursMarginBuy,
-            kursSell: kursBCA.data[4].kursMarginSell,
+            kursBuy:  kursBCA ? kursBCA.data[4].kursMarginBuy:0,
+            kursSell:  kursBCA ? kursBCA.data[4].kursMarginSell:0,
             bankType: "BCA"
         }
         setdDataExchange(data);
@@ -137,8 +137,8 @@ export default function KursBank(props) {
 
         const data = {
             currency: "EUR/IDR",
-            kursBuy: kursBCA.data[3].kursMarginBuy,
-            kursSell: kursBCA.data[3].kursMarginSell,
+            kursBuy:  kursBCA ? kursBCA.data[3].kursMarginBuy:0,
+            kursSell:  kursBCA ? kursBCA.data[3].kursMarginSell:0,
             bankType: "BCA"
         }
         setdDataExchange(data);
@@ -164,8 +164,8 @@ export default function KursBank(props) {
 
         const data = {
             currency: "USD/IDR",
-            kursBuy: kursBRI.data[1].kursMarginBuy,
-            kursSell: kursBRI.data[1].kursMarginSell,
+            kursBuy:  kursBRI ? kursBRI.data[1].kursMarginBuy : 0,
+            kursSell: kursBRI ? kursBRI.data[1].kursMarginSell: 0,
             bankType: "BRI"
         }
         setdDataExchange(data);
@@ -191,8 +191,8 @@ export default function KursBank(props) {
 
         const data = {
             currency: "SGD/IDR",
-            kursBuy: kursBRI.data[2].kursMarginBuy,
-            kursSell: kursBRI.data[2].kursMarginSell,
+            kursBuy: kursBRI ? kursBRI.data[2].kursMarginBuy:0,
+            kursSell: kursBRI ? kursBRI.data[2].kursMarginSell:0,
             bankType: "BRI"
         }
         setdDataExchange(data);
@@ -218,8 +218,8 @@ export default function KursBank(props) {
 
         const data = {
             currency: "AUD/IDR",
-            kursBuy: kursBRI.data[4].kursMarginBuy,
-            kursSell: kursBRI.data[4].kursMarginSell,
+            kursBuy: kursBRI ? kursBRI.data[4].kursMarginBuy:0,
+            kursSell: kursBRI ? kursBRI.data[4].kursMarginSell:0,
             bankType: "BRI"
         }
         setdDataExchange(data);
@@ -245,8 +245,8 @@ export default function KursBank(props) {
 
         const data = {
             currency: "EUR/IDR",
-            kursBuy: kursBRI.data[3].kursMarginBuy,
-            kursSell: kursBRI.data[3].kursMarginSell,
+            kursBuy: kursBRI ? kursBRI.data[3].kursMarginBuy:0,
+            kursSell: kursBRI ? kursBRI.data[3].kursMarginSell:0,
             bankType: "BRI"
         }
         setdDataExchange(data);
@@ -272,8 +272,8 @@ export default function KursBank(props) {
 
         const data = {
             currency: "USD/IDR",
-            kursBuy: kursMandiri.data[1].kursMarginBuy,
-            kursSell: kursMandiri.data[1].kursMarginSell,
+            kursBuy: kursMandiri ? kursMandiri.data[1].kursMarginBuy:0,
+            kursSell: kursMandiri ?  kursMandiri.data[1].kursMarginSell:0,
             bankType: "Mandiri"
         }
         setdDataExchange(data);
@@ -299,8 +299,8 @@ export default function KursBank(props) {
 
         const data = {
             currency: "SGD/IDR",
-            kursBuy: kursMandiri.data[2].kursMarginBuy,
-            kursSell: kursMandiri.data[2].kursMarginSell,
+            kursBuy: kursMandiri ?  kursMandiri.data[2].kursMarginBuy:0,
+            kursSell: kursMandiri ? kursMandiri.data[2].kursMarginSell:0,
             bankType: "Mandiri"
         }
         setdDataExchange(data);
@@ -326,8 +326,8 @@ export default function KursBank(props) {
 
         const data = {
             currency: "AUD/IDR",
-            kursBuy: kursMandiri.data[4].kursMarginBuy,
-            kursSell: kursMandiri.data[4].kursMarginSell,
+            kursBuy: kursMandiri ?  kursMandiri.data[4].kursMarginBuy:0,
+            kursSell: kursMandiri ?  kursMandiri.data[4].kursMarginSell:0,
             bankType: "Mandiri"
         }
         setdDataExchange(data);
@@ -353,8 +353,8 @@ export default function KursBank(props) {
 
         const data = {
             currency: "EUR/IDR",
-            kursBuy: kursMandiri.data[3].kursMarginBuy,
-            kursSell: kursMandiri.data[3].kursMarginSell,
+            kursBuy: kursMandiri ? kursMandiri.data[3].kursMarginBuy:0,
+            kursSell: kursMandiri ?  kursMandiri.data[3].kursMarginSell:0,
             bankType: "Mandiri"
         }
         setdDataExchange(data);
@@ -362,9 +362,14 @@ export default function KursBank(props) {
         console.log(dataExchange);
     }
 
-    function clickLanjut(){
-        localStorage.setItem("data", JSON.stringify(dataExchange));
-        navigate(`/transaction/exchange`)
+    function clickLanjut() {
+        if (!kursBCA || !kursBRI || !kursMandiri) {
+            setButtonDisabled(true);
+        } else {
+            setButtonDisabled(false);
+            localStorage.setItem("data", JSON.stringify(dataExchange));
+            navigate(`/transaction/exchange`)
+        }
     }
 
     return (
@@ -543,14 +548,14 @@ export default function KursBank(props) {
                 </BorderKursRateBank>
             </ContainerKursBank>
             <ContainerDescriptionKurs>
-                    <DescriptionFirstKursText>
-                        Kurs dapat berubah sewaktu-waktu sebelum pembayaran selesai dilakukan.
-                    </DescriptionFirstKursText>
-                </ContainerDescriptionKurs>
+                <DescriptionFirstKursText>
+                    Kurs dapat berubah sewaktu-waktu sebelum pembayaran selesai dilakukan.
+                </DescriptionFirstKursText>
+            </ContainerDescriptionKurs>
 
-                <BorderSubmit className='ButtonSubmitHover'>
-                    <button className='ButtonSubmit' onClick={clickLanjut} disabled={buttonDisabled}>Lanjut</button>
-                </BorderSubmit>
+            <BorderSubmit className='ButtonSubmitHover'>
+                <button className='ButtonSubmit' onClick={clickLanjut} disabled={buttonDisabled}>Lanjut</button>
+            </BorderSubmit>
         </ContainerKursRate>
     )
 }
