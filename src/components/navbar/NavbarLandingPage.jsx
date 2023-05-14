@@ -33,12 +33,12 @@ const NavbarLandingPage = (props) => {
               {menu2}
             </MenuNavbar>
           </Link>
-          <MenuNavbar>
+          {/* <MenuNavbar>
             {menu3}
           </MenuNavbar>
           <MenuNavbar>
             {menu4}
-          </MenuNavbar>
+          </MenuNavbar> */}
         </BorderMenuNavbar>
         {/* Menu Navbar */}
         <BorderLoginAndRegister>

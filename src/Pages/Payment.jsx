@@ -135,10 +135,6 @@ export default function Payment() {
       setShowRincianPembayaran('hideForm');
       setShowFailed('showUpForm');
       reconPaymentApi();
-    } if (remainingTime === '00:00') {
-      console.log(remainingTime);
-      setShowRincianPembayaran('hideForm');
-      setShowFailed('showUpForm');
     } else {
       setShowWaitingPayment('showUpForm');
     }
