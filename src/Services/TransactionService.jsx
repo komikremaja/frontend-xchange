@@ -1,7 +1,7 @@
 import API from "../API/API";
 
 export const ExchcangeService = async (data) => {
-    const url = `http://localhost:8383/transaction-service/transaction`;
+    const url = `http://192.168.133.128:8383/transaction-service/transaction`;
     const response = await API({
         url,
         method: "post",
@@ -12,7 +12,7 @@ export const ExchcangeService = async (data) => {
 }
 
 export const InquiryTransaction = async (data) => {
-    const url = `http://localhost:8383/transaction-service/inquiry/transaction/${data.vaNumber}`;
+    const url = `http://192.168.133.128:8383/transaction-service/inquiry/transaction/${data.vaNumber}`;
     const response = await API({
         url,
         method: "get",
@@ -23,7 +23,7 @@ export const InquiryTransaction = async (data) => {
 }
 
 export const ReconPaymentStatus = async (data) => {
-    const url = `http://localhost:8383/transaction-service/recon/payment-status`;
+    const url = `http://192.168.133.128:8383/transaction-service/recon/payment-status`;
     const response = await API({
         url,
         method: "post",
@@ -34,7 +34,7 @@ export const ReconPaymentStatus = async (data) => {
 }
 
 export const InquiryListHistoryTransaction = async (data) => {
-    const url = `http://localhost:8383/transaction-service/history-transaction/list/${data.nic}`;
+    const url = `http://192.168.133.128:8383/transaction-service/history-transaction/list/${data.nic}`;
     const response = await API({
         url,
         method: "get",
@@ -45,7 +45,7 @@ export const InquiryListHistoryTransaction = async (data) => {
 }
 
 export const InquiryDetailTransaction = async (data) => {
-    const url = `http://localhost:8383/transaction-service/history-transaction/${data}`;
+    const url = `http://192.168.133.128:8383/transaction-service/history-transaction/${data}`;
     const response = await API({
         url,
         method: "get",

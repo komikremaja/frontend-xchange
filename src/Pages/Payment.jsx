@@ -64,32 +64,32 @@ export default function Payment() {
     if (vaNumberLs === null) {
       navigate(`/kurs-rate`);
     }
-    const targetDate = new Date(expiredDate);
     const currentTime = new Date();
+    const targetDate = new Date(expiredDate);
+    targetDate.setSeconds(targetDate.getSeconds() - 8);
     const diffTime = targetDate - currentTime;
+    console.log(targetDate, "|", currentTime);
+    let remainingSeconds = 0;
     if (diffTime <= 0) {
       setRemainingTime('00:00');
     } else {
       let remainingMinutes = Math.floor(diffTime / 1000 / 60);
-      let remainingSeconds = Math.floor((diffTime / 1000) % 60);
+      remainingSeconds = Math.floor((diffTime / 1000) % 60);
+
+      console.log("remaining minutes ", remainingMinutes);
       if (remainingMinutes < 0) {
         setRemainingTime('00:00');
       } else if (remainingMinutes > 10) {
         setRemainingTime(`${remainingMinutes < 10 ? `0${remainingMinutes}` : remainingMinutes}:${remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds}`);
       } else {
-        if (remainingMinutes > 0) {
-          if (remainingSeconds === 0) {
-            remainingSeconds = 60;
-          }
-        } else {
-          if (remainingSeconds === 0) {
-            remainingSeconds = 1;
-          }
+        if (remainingMinutes > 0 && remainingSeconds === 0) {
+          remainingMinutes -= 1;
+          remainingSeconds = 60;
         }
         remainingSeconds -= 1;
         if (remainingSeconds < 0) {
-          remainingSeconds = remainingSeconds;
-          remainingMinutes = remainingMinutes;
+          remainingSeconds = 0;
+          remainingMinutes = 0;
         }
         setRemainingTime(`${remainingMinutes < 10 ? `0${remainingMinutes}` : remainingMinutes}:${remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds}`);
       }
