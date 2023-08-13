@@ -404,7 +404,7 @@ export default function FormTransactionExchange(props) {
                         <option key={rekening.accountNumber} value={`${rekening.accountNumber}-${rekening.bankType}-${rekening.typeAccount}`}>{rekening.accountNumber} - {rekening.bankType} - {rekening.typeAccount}</option>
                     ))}
                 </select>
-                <ErrorMessageCannotEmpty className={paymentMethodEmpty}>Jenis Transaksi tidak boleh kosong</ErrorMessageCannotEmpty>
+                <ErrorMessageCannotEmpty className={paymentMethodEmpty}>Payment method tidak boleh kosong</ErrorMessageCannotEmpty>
                 <LableInputExchange>
                     Payment Method
                 </LableInputExchange>

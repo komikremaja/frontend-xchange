@@ -66,7 +66,7 @@ export default function Payment() {
     }
     const currentTime = new Date();
     const targetDate = new Date(expiredDate);
-    targetDate.setSeconds(targetDate.getSeconds() - 8);
+    targetDate.setSeconds(targetDate.getSeconds()+2);
     const diffTime = targetDate - currentTime;
     console.log(targetDate, "|", currentTime);
     let remainingSeconds = 0;
